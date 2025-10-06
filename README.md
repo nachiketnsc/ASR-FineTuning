@@ -30,7 +30,8 @@ pip install jiwer
 pip install transformers>=4.30.0
 
 # 📂 Dataset Details
-Firstly, download the "train-00000-of-00005-c6681348ac8543dc.parquet" from the https://huggingface.co/datasets/jlvdoorn/atco2-asr-atcosim/tree/main/data site.
+Firstly, download the "[train-00000-of-00005-c6681348ac8543dc.parquet](https://huggingface.co/datasets/jlvdoorn/atco2-asr-atcosim/tree/main/data)" from the Hugging Face dataset site.
+
 The notebook loads the dataset using:
 
 ```python
