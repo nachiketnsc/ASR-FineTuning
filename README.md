@@ -27,7 +27,8 @@ pip install "datasets<3.0.0"
 pip install librosa
 pip install evaluate>=0.30
 pip install jiwer
-pip install transformers>=4.30.0
+pip install transformers>=4.30.0 
+```
 
 # 📂 Dataset Details
 Firstly, download the "[train-00000-of-00005-c6681348ac8543dc.parquet](https://huggingface.co/datasets/jlvdoorn/atco2-asr-atcosim/tree/main/data)" from the Hugging Face dataset site.
@@ -41,13 +42,14 @@ atco_asr_data = load_dataset(
     'parquet',
     data_files="train-00000-of-00005-c6681348ac8543dc.parquet"
 )
+```
 # 🧰 Feature Extraction & Tokenization
 
 The notebook uses Hugging Face’s Whisper processing utilities:
 
 ```python
 from transformers import WhisperTokenizer, WhisperFeatureExtractor, WhisperForConditionalGeneration
-
+```
 # 🧪 Preprocessing Workflow
 
 1. **Load the dataset** (`datasets` library).  
@@ -92,6 +94,7 @@ trainer = Trainer(
 )
 
 trainer.train()
+```            
 # 📊 Evaluation
 
 The notebook imports:
@@ -116,7 +119,7 @@ cer = jiwer.cer(references, predictions)
 
 print(f"Word Error Rate: {wer:.2f}")
 print(f"Character Error Rate: {cer:.2f}")
-
+```
 # 💡 Notes
 
 - Ensure your dataset’s **sample rate** matches Whisper’s expected input (typically **16 kHz**).  
